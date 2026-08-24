@@ -11,7 +11,6 @@ export default function Nav() {
   return (
     <nav className={styles.nav}>
       <div className={`container ${styles.inner}`}>
-        <span aria-hidden="true" />
         <a href="#" className={styles.wordmark}>
           Dani Szwarc
         </a>
