@@ -4,7 +4,7 @@ const blocks = [
   { label: "Email", value: "dani@daniszwarc.com", href: "mailto:dani@daniszwarc.com" },
   { label: "LinkedIn", value: "linkedin.com/in/daniszwarc", href: "https://linkedin.com/in/daniszwarc", external: true },
   { label: "GitHub", value: "github.com/daniszwarc", href: "https://github.com/daniszwarc", external: true },
-  { label: "CV", value: "Download PDF", href: "/Daniel_Szwarc_CV.pdf" },
+  { label: "CV", value: "Download PDF", href: "/Daniel_Szwarc_CV.pdf", external: true },
 ];
 
 export default function Contact() {
