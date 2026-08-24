@@ -7,7 +7,9 @@ export default function Hero() {
         <div className={`container ${styles.inner}`}>
           <p className={styles.eyebrow}>Montreal · AI Engineer · Full-Stack Developer</p>
           <h1 className={styles.headline}>
-            I build AI systems that <em>work in production</em>, not just in demos.
+            I build AI systems, from idea to final product. I work best when I&apos;m close
+            to the problem. Architecture, implementation, deploy, iterate with real users.
+            The full loop.
           </h1>
           <p className={styles.subtext}>
             I&apos;ve spent two decades building enterprise software in environments where
