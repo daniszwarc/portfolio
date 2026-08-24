@@ -10,7 +10,7 @@ services:
       - "traefik.http.routers.daniszwarc.rule=Host(`daniszwarc.com`)"
       - "traefik.http.routers.daniszwarc.entrypoints=websecure"
       - "traefik.http.routers.daniszwarc.tls=true"
-      - "traefik.http.routers.daniszwarc.tls.certresolver=mytlschallenge"
+      - "traefik.http.routers.daniszwarc.tls.certresolver=letsencrypt"
       - "traefik.http.services.daniszwarc.loadbalancer.server.port=80"
 
 networks:
