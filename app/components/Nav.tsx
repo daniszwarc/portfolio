@@ -12,7 +12,7 @@ export default function Nav() {
     <nav className={styles.nav}>
       <div className={`container ${styles.inner}`}>
         <a href="#" className={styles.wordmark}>
-          Daniel Szwarc
+          Dani Szwarc
         </a>
         <ul className={styles.links}>
           {links.map((link) => (

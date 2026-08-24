@@ -5,6 +5,7 @@ export default function Hero() {
     <>
       <section className={styles.hero}>
         <div className={`container ${styles.inner}`}>
+          <p className={styles.name}>Dani Szwarc</p>
           <p className={styles.eyebrow}>Montreal · AI Engineer · Full-Stack Developer</p>
           <h1 className={styles.headline}>
             I build AI systems, from idea to final product. I work best when I&apos;m close
