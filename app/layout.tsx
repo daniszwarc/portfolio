@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { fraunces, jetbrains } from "./fonts";
 
 export const metadata: Metadata = {
-  title: "Daniel Szwarc — Alternate Build",
-  description: "Alternate design direction for daniszwarc.com — bold constructivist light theme.",
+  title: "Dani Szwarc — AI Engineer & Full-Stack Developer",
+  description:
+    "Montreal-based AI engineer and full-stack developer. I build AI systems from idea to production.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
