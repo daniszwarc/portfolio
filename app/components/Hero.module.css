@@ -26,7 +26,7 @@
 .name {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 3rem;
   color: #1a1814;
   margin-bottom: 10px;
 }
@@ -58,7 +58,7 @@
 
 .subtext {
   margin-top: 32px;
-  max-width: 62ch;
+  max-width: 860px;
   font-size: clamp(0.95rem, 1.5vw, 1.05rem);
   line-height: 1.75;
   color: var(--ink);
