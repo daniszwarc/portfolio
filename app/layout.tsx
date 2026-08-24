@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   description: "Alternate design direction for daniszwarc.com — bold constructivist light theme.",
 };
 
-export default function AltLayout({ children }: { children: React.ReactNode }) {
-  return <div className={`${fraunces.variable} ${jetbrains.variable}`}>{children}</div>;
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en" className={`${fraunces.variable} ${jetbrains.variable}`}>
+      <body>{children}</body>
+    </html>
+  );
 }
