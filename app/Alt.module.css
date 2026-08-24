@@ -90,6 +90,15 @@
   overflow: hidden;
 }
 
+@media (max-width: 480px) {
+  .hero {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+}
+
 .heroWatermark {
   position: absolute;
   top: -0.28em;
@@ -213,10 +222,15 @@
   .ctas {
     flex-direction: column;
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
   .cta {
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     text-align: center;
     border-right: none;
     border-bottom: 3px solid var(--line);
