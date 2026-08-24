@@ -30,7 +30,12 @@ export default function Hero() {
             <a href="#projects" className={`${styles.cta} ${styles.ghost}`}>
               View projects
             </a>
-            <a href="/Daniel_Szwarc_CV.pdf" className={`${styles.cta} ${styles.ghost}`}>
+            <a
+              href="/Daniel_Szwarc_CV.pdf"
+              className={`${styles.cta} ${styles.ghost}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Download CV
             </a>
           </div>

@@ -1,11 +1,23 @@
-import Nav from "./components/Nav";
-import Hero from "./components/Hero";
-import { SplitSection, SplitItem } from "./components/SplitList";
-import Stack from "./components/Stack";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import styles from "./Alt.module.css";
 
-const projects: SplitItem[] = [
+const navLinks = [
+  { href: "#projects", label: "Projects" },
+  { href: "#experience", label: "Experience" },
+  { href: "#stack", label: "Stack" },
+  { href: "#contact", label: "Contact" },
+];
+
+type Row = {
+  label: string;
+  year: string;
+  title: string;
+  company?: string;
+  description: string;
+  tags?: string[];
+  outcome?: string;
+};
+
+const projects: Row[] = [
   {
     label: "Clinical AI",
     year: "2024–present",
@@ -53,7 +65,7 @@ const projects: SplitItem[] = [
   },
 ];
 
-const experience: SplitItem[] = [
+const experience: Row[] = [
   {
     label: "2006–present",
     year: "",
@@ -80,16 +92,220 @@ const experience: SplitItem[] = [
   },
 ];
 
-export default function Home() {
+const stackGroups = [
+  { title: "AI/LLM", items: "LangChain · LangGraph · RAG · pgvector · Agentic workflows · OpenAI · Anthropic" },
+  { title: "Backend", items: "Python · FastAPI · Node.js · PHP · ColdFusion · SQL · PostgreSQL · MSSQL" },
+  { title: "Frontend", items: "React · Next.js · TypeScript · JavaScript · React Native · Expo" },
+  { title: "Infra", items: "Docker · Traefik · GitHub Actions · VPS · CI/CD · n8n" },
+  { title: "Deep Learning", items: "PyTorch · fast.ai · ResNet · ViT · MIL · WSI analysis" },
+  { title: "Languages", items: "English (fluent) · Spanish (fluent) · French (basic)" },
+];
+
+const contactBlocks = [
+  { label: "Email", value: "dani@daniszwarc.com", href: "mailto:dani@daniszwarc.com" },
+  { label: "LinkedIn", value: "linkedin.com/in/daniszwarc", href: "https://linkedin.com/in/daniszwarc", external: true },
+  { label: "GitHub", value: "github.com/daniszwarc", href: "https://github.com/daniszwarc", external: true },
+  { label: "CV", value: "Download PDF", href: "/Daniel_Szwarc_CV.pdf", external: true },
+];
+
+function Section({
+  id,
+  number,
+  title,
+  count,
+  rows,
+}: {
+  id: string;
+  number: string;
+  title: string;
+  count: string;
+  rows: Row[];
+}) {
   return (
-    <>
-      <Nav />
-      <Hero />
-      <SplitSection id="projects" number="§1" title="Projects" items={projects} />
-      <SplitSection id="experience" number="§2" title="Experience" items={experience} />
-      <Stack />
-      <Contact />
-      <Footer />
-    </>
+    <section id={id} className={styles.section}>
+      <div className={styles.wrap}>
+        <div className={styles.sectionHead}>
+          <div style={{ display: "flex", alignItems: "baseline", gap: 16 }}>
+            <span className={styles.sectionNum}>{number}</span>
+            <h2 className={styles.sectionTitle}>{title}</h2>
+          </div>
+          <span className={styles.sectionCount}>{count}</span>
+        </div>
+        <div>
+          {rows.map((row, i) => (
+            <div className={styles.row} key={row.title}>
+              <span className={styles.rowIndex}>{String(i + 1).padStart(2, "0")}</span>
+              <div className={styles.rowMeta}>
+                <span className={styles.rowLabel}>{row.label}</span>
+                {row.year && <span className={styles.rowYear}>{row.year}</span>}
+              </div>
+              <div className={styles.rowBody}>
+                <h3 className={styles.rowTitle}>{row.title}</h3>
+                {row.company && <p className={styles.rowCompany}>{row.company}</p>}
+                <p className={styles.rowDesc}>{row.description}</p>
+                {row.tags && (
+                  <div className={styles.tags}>
+                    {row.tags.map((tag) => (
+                      <span className={styles.tag} key={tag}>
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                {row.outcome && <p className={styles.outcome}>{row.outcome}</p>}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default function AltHome() {
+  return (
+    <div className={styles.page}>
+      <nav className={styles.nav}>
+        <div className={`${styles.wrap} ${styles.navInner}`}>
+          <a href="#" className={styles.navMark}>
+            Dani Szwarc
+          </a>
+          <ul className={styles.navLinks}>
+            {navLinks.map((link, i) => (
+              <li key={link.href}>
+                <a href={link.href} data-i={i + 1}>
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav>
+
+      <section className={styles.hero}>
+        <span className={styles.heroWatermark} aria-hidden="true">
+          AI
+        </span>
+        <div className={styles.wrap}>
+          <div className={styles.heroGrid}>
+            <div />
+            <div>
+              <span className={styles.heroTag}>
+                <span className={styles.dot} />
+                Available for work
+              </span>
+              <p className={styles.heroName}>Dani Szwarc</p>
+              <p className={styles.heroRole}>Montreal · AI Engineer · Full-Stack Developer</p>
+              <h1 className={styles.headline}>
+                I build AI systems, from idea to final product. I work best when
+                I&apos;m close to the problem. Architecture, implementation, deploy,
+                iterate with real users. The full loop.
+              </h1>
+              <p className={styles.subtext}>
+                I&apos;ve spent two decades building enterprise software in environments where
+                reliability isn&apos;t optional. Over the last few years I shifted focus to AI
+                systems, not because it&apos;s trendy, but because that&apos;s where the hard
+                problems are right now.
+              </p>
+              <p className={styles.subtext}>
+                Most of my recent work sits at the intersection of document intelligence, RAG
+                pipelines, and agentic automation. A recurring theme: AI systems that behave
+                predictably under real operating conditions.
+              </p>
+              <div className={styles.ctas}>
+                <a href="#contact" className={`${styles.cta} ${styles.primary}`}>
+                  Get in touch
+                </a>
+                <a href="#projects" className={`${styles.cta} ${styles.ghost}`}>
+                  View projects
+                </a>
+                <a
+                  href="/Daniel_Szwarc_CV.pdf"
+                  className={`${styles.cta} ${styles.ghost}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Download CV
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className={styles.meta} style={{ borderBottom: "3px solid var(--line)" }}>
+        <div className={styles.metaItem}>
+          <span className={styles.metaLabel}>Location</span>
+          <span className={styles.metaValue}>Montreal, QC</span>
+        </div>
+        <div className={styles.metaItem}>
+          <span className={styles.metaLabel}>Email</span>
+          <span className={styles.metaValue}>dani@daniszwarc.com</span>
+        </div>
+        <div className={styles.metaItem}>
+          <span className={styles.metaLabel}>MSc AI</span>
+          <span className={styles.metaValue}>University of Liverpool, 2026</span>
+        </div>
+        <div className={styles.metaItem}>
+          <span className={styles.metaLabel}>Open to</span>
+          <span className={styles.metaValue}>Full-time · Contract</span>
+        </div>
+      </div>
+
+      <Section id="projects" number="§1" title="Projects" count="05 entries" rows={projects} />
+      <Section id="experience" number="§2" title="Experience" count="03 entries" rows={experience} />
+
+      <section id="stack" className={styles.section}>
+        <div className={styles.wrap}>
+          <div className={styles.sectionHead}>
+            <div style={{ display: "flex", alignItems: "baseline", gap: 16 }}>
+              <span className={styles.sectionNum}>§3</span>
+              <h2 className={styles.sectionTitle}>Stack</h2>
+            </div>
+            <span className={styles.sectionCount}>06 groups</span>
+          </div>
+          <div className={styles.stackGrid}>
+            {stackGroups.map((group) => (
+              <div className={styles.stackGroup} key={group.title}>
+                <p className={styles.stackTitle}>{group.title}</p>
+                <p className={styles.stackItems}>{group.items}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className={styles.section} style={{ borderBottom: "none" }}>
+        <div className={styles.wrap}>
+          <div className={styles.sectionHead}>
+            <div style={{ display: "flex", alignItems: "baseline", gap: 16 }}>
+              <span className={styles.sectionNum}>§4</span>
+              <h2 className={styles.sectionTitle}>Contact</h2>
+            </div>
+            <span className={styles.sectionCount}>04 channels</span>
+          </div>
+          <div className={styles.contactGrid}>
+            {contactBlocks.map((block) => (
+              <a
+                href={block.href}
+                className={styles.contactBlock}
+                key={block.label}
+                {...(block.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+              >
+                <span className={styles.contactLabel}>{block.label}</span>
+                <span className={styles.contactValue}>{block.value}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <footer className={styles.footer}>
+        <div className={`${styles.wrap} ${styles.footerInner}`}>
+          <span>Daniel Szwarc · Montreal, QC · 2026</span>
+          <span>daniszwarc.com</span>
+        </div>
+      </footer>
+    </div>
   );
 }
