@@ -209,6 +209,24 @@
   border-right: none;
 }
 
+@media (max-width: 480px) {
+  .ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta {
+    width: 100%;
+    text-align: center;
+    border-right: none;
+    border-bottom: 3px solid var(--line);
+  }
+
+  .cta:last-child {
+    border-bottom: none;
+  }
+}
+
 .primary {
   background: var(--ink);
   color: var(--white);
@@ -266,6 +284,27 @@
 
 .metaItem:last-child {
   border-right: none;
+}
+
+@media (max-width: 480px) {
+  .meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .metaItem {
+    padding: 14px 16px;
+    border-right: 3px solid var(--line);
+    border-bottom: 3px solid var(--line);
+  }
+
+  .metaItem:nth-child(2n) {
+    border-right: none;
+  }
+
+  .metaItem:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
 }
 
 .metaLabel {
