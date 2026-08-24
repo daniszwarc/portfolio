@@ -10,9 +10,15 @@ export default function Hero() {
             I build AI systems that <em>work in production</em>, not just in demos.
           </h1>
           <p className={styles.subtext}>
-            25+ years of enterprise delivery. MSc in Artificial Intelligence (University of
-            Liverpool, 2026). I own products end to end — from architecture and API design to
-            frontend, deployment, and iteration with real users.
+            I&apos;ve spent two decades building enterprise software in environments where
+            reliability isn&apos;t optional. Over the last few years I shifted focus to AI
+            systems, not because it&apos;s trendy, but because that&apos;s where the hard
+            problems are right now.
+          </p>
+          <p className={styles.subtext}>
+            Most of my recent work sits at the intersection of document intelligence, RAG
+            pipelines, and agentic automation. A recurring theme: AI systems that behave
+            predictably under real operating conditions.
           </p>
           <div className={styles.ctas}>
             <a href="#contact" className={`${styles.cta} ${styles.primary}`}>
