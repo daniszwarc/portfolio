@@ -3,6 +3,7 @@ import styles from "./Alt.module.css";
 const navLinks = [
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
+  { href: "#education", label: "Education" },
   { href: "#stack", label: "Stack" },
   { href: "#contact", label: "Contact" },
 ];
@@ -15,6 +16,7 @@ type Row = {
   description: string;
   tags?: string[];
   outcome?: string;
+  link?: { href: string; label: string };
 };
 
 const projects: Row[] = [
@@ -44,6 +46,7 @@ const projects: Row[] = [
       "Dissertation project converting natural language descriptions into formally verified executable workflows using a two-layer DSL and LLM-guided iterative refinement. LangGraph state machine with Lark-based grammar, 25 constrained primitives, and a verify-then-repair loop targeting n8n and LangChain output.",
     tags: ["Python", "LangChain", "LangGraph", "PyYAML", "n8n"],
     outcome: "82/82 unit tests · formal verification · University of Liverpool",
+    link: { href: "https://github.com/daniszwarc/workflowsynth", label: "View on GitHub →" },
   },
   {
     label: "AI Agent",
@@ -62,6 +65,24 @@ const projects: Row[] = [
       "AI pipeline automating 40+ articles per issue from PDF to Drupal CMS for an economics cooperative. Claude Vision API + n8n orchestration; taxonomy matching with accent normalization. Delivered iteratively with the client.",
     tags: ["n8n", "Claude Vision", "Drupal", "JavaScript"],
     outcome: "30 min → under 3 min per article · 10x+ efficiency gain",
+  },
+  {
+    label: "Personal Project",
+    year: "2025–present",
+    title: "FitTrack",
+    description:
+      "Full-stack mobile fitness tracking app with AI food label scanning (vision model), workout logging, and progress stats. Built end to end as a personal product.",
+    tags: ["React Native", "Expo", "TypeScript", "Supabase", "AI Vision"],
+    outcome: "Personal product · end-to-end ownership · AI vision integration",
+  },
+  {
+    label: "Healthcare AI",
+    year: "2023–2024",
+    title: "MedSynth",
+    description:
+      "Platform ingesting patient medical histories (PDFs) into structured clinical knowledge wikis using adversarial dual-model iteration (Claude Opus + GPT-4o) until clinical findings converge. Taken private; shared as architectural case study.",
+    tags: ["Python", "FastAPI", "PostgreSQL", "Next.js", "Docker"],
+    outcome: "80% LLM cost reduction · adversarial dual-model · compliance-by-design",
   },
 ];
 
@@ -91,6 +112,26 @@ const experience: Row[] = [
       "Dissertation: WorkflowSynth — LLM-guided programme synthesis with formal verification for enterprise workflows. Advisor: Kathleen Kelm.",
   },
 ];
+
+const education: Row[] = [
+  {
+    label: "Expected 2026",
+    year: "",
+    title: "MSc in Artificial Intelligence",
+    company: "University of Liverpool, England",
+    description:
+      "Dissertation: WorkflowSynth — LLM-guided programme synthesis with formal verification for enterprise workflows",
+  },
+  {
+    label: "1999–2001",
+    year: "",
+    title: "Microcomputer Programming & Web Developer Certificates",
+    company: "Centennial College, Toronto",
+    description: "",
+  },
+];
+
+const certifications = ["Agentic RAG Specialization · Coursera", "AI & Automation Specializations · Coursera / Udemy"];
 
 const stackGroups = [
   { title: "AI/LLM", items: "LangChain · LangGraph · RAG · pgvector · Agentic workflows · OpenAI · Anthropic" },
@@ -148,6 +189,16 @@ function Section({
                   </div>
                 )}
                 {row.outcome && <p className={styles.outcome}>{row.outcome}</p>}
+                {row.link && (
+                  <a
+                    href={row.link.href}
+                    className={styles.rowLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {row.link.label}
+                  </a>
+                )}
               </div>
             </div>
           ))}
@@ -241,8 +292,40 @@ export default function AltHome() {
         </div>
       </div>
 
-      <Section id="projects" title="Projects" count="05 entries" rows={projects} />
+      <Section id="projects" title="Projects" count="07 entries" rows={projects} />
       <Section id="experience" title="Experience" count="03 entries" rows={experience} />
+
+      <section id="education" className={styles.section}>
+        <div className={styles.wrap}>
+          <div className={styles.sectionHead}>
+            <h2 className={styles.sectionTitle}>Education &amp; Certifications</h2>
+            <span className={styles.sectionCount}>02 + 02</span>
+          </div>
+          <div>
+            {education.map((edu, i) => (
+              <div className={styles.row} key={edu.title}>
+                <span className={styles.rowIndex}>{String(i + 1).padStart(2, "0")}</span>
+                <div className={styles.rowMeta}>
+                  <span className={styles.rowLabel}>{edu.label}</span>
+                </div>
+                <div className={styles.rowBody}>
+                  <h3 className={styles.rowTitle}>{edu.title}</h3>
+                  {edu.company && <p className={styles.rowCompany}>{edu.company}</p>}
+                  {edu.description && <p className={styles.rowDesc}>{edu.description}</p>}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className={styles.certBlock}>
+            <p className={styles.stackTitle}>Certifications</p>
+            <ul className={styles.certList}>
+              {certifications.map((cert) => (
+                <li key={cert}>{cert}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
 
       <section id="stack" className={styles.section}>
         <div className={styles.wrap}>
