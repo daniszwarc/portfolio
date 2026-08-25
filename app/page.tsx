@@ -51,7 +51,7 @@ const projects: Row[] = [
     title: "Soccer Verdun Email Agent",
     description:
       "Multilingual AI email agent for a Montreal community soccer club. Automates responses to player and parent inquiries in EN/FR/ES using RAG over club documents. OAuth-authenticated Gmail integration deployed in production.",
-    tags: ["n8n", "Pinecone", "FastAPI", "Gmail OAuth"],
+    tags: ["n8n", "Pinecone", "Gmail OAuth", "NaN.builders/qwen3.6"],
     outcome: "Production · trilingual · zero-downtime model swap",
   },
   {
