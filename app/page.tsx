@@ -101,7 +101,7 @@ const experience: Row[] = [
     title: "AI Integration & Legacy Modernization Specialist",
     company: "Fresche Solutions · Montreal",
     description:
-      "Lead modernization of IBM i legacy systems for enterprise clients. Technical bridge between legacy business logic and modern stack — translating complex 4GL/COBOL workflows into Python/SQL architectures.",
+      "Lead modernization of legacy systems for enterprise clients. Technical bridge between legacy business logic and modern stack — translating complex 4GL/COBOL workflows into PHP/JavaScript/SQL architectures.",
   },
   {
     label: "2024–2026",
