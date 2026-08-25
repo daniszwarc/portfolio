@@ -110,13 +110,11 @@ const contactBlocks = [
 
 function Section({
   id,
-  number,
   title,
   count,
   rows,
 }: {
   id: string;
-  number: string;
   title: string;
   count: string;
   rows: Row[];
@@ -125,10 +123,7 @@ function Section({
     <section id={id} className={styles.section}>
       <div className={styles.wrap}>
         <div className={styles.sectionHead}>
-          <div style={{ display: "flex", alignItems: "baseline", gap: 16 }}>
-            <span className={styles.sectionNum}>{number}</span>
-            <h2 className={styles.sectionTitle}>{title}</h2>
-          </div>
+          <h2 className={styles.sectionTitle}>{title}</h2>
           <span className={styles.sectionCount}>{count}</span>
         </div>
         <div>
@@ -171,11 +166,9 @@ export default function AltHome() {
             Dani Szwarc
           </a>
           <ul className={styles.navLinks}>
-            {navLinks.map((link, i) => (
+            {navLinks.map((link) => (
               <li key={link.href}>
-                <a href={link.href} data-i={i + 1}>
-                  {link.label}
-                </a>
+                <a href={link.href}>{link.label}</a>
               </li>
             ))}
           </ul>
@@ -190,10 +183,6 @@ export default function AltHome() {
           <div className={styles.heroGrid}>
             <div />
             <div>
-              <span className={styles.heroTag}>
-                <span className={styles.dot} />
-                Available for work
-              </span>
               <p className={styles.heroName}>Dani Szwarc</p>
               <p className={styles.heroRole}>Montreal · AI Engineer · Full-Stack Developer</p>
               <h1 className={styles.headline}>
@@ -252,16 +241,13 @@ export default function AltHome() {
         </div>
       </div>
 
-      <Section id="projects" number="§1" title="Projects" count="05 entries" rows={projects} />
-      <Section id="experience" number="§2" title="Experience" count="03 entries" rows={experience} />
+      <Section id="projects" title="Projects" count="05 entries" rows={projects} />
+      <Section id="experience" title="Experience" count="03 entries" rows={experience} />
 
       <section id="stack" className={styles.section}>
         <div className={styles.wrap}>
           <div className={styles.sectionHead}>
-            <div style={{ display: "flex", alignItems: "baseline", gap: 16 }}>
-              <span className={styles.sectionNum}>§3</span>
-              <h2 className={styles.sectionTitle}>Stack</h2>
-            </div>
+            <h2 className={styles.sectionTitle}>Stack</h2>
             <span className={styles.sectionCount}>06 groups</span>
           </div>
           <div className={styles.stackGrid}>
@@ -278,10 +264,7 @@ export default function AltHome() {
       <section id="contact" className={styles.section} style={{ borderBottom: "none" }}>
         <div className={styles.wrap}>
           <div className={styles.sectionHead}>
-            <div style={{ display: "flex", alignItems: "baseline", gap: 16 }}>
-              <span className={styles.sectionNum}>§4</span>
-              <h2 className={styles.sectionTitle}>Contact</h2>
-            </div>
+            <h2 className={styles.sectionTitle}>Contact</h2>
             <span className={styles.sectionCount}>04 channels</span>
           </div>
           <div className={styles.contactGrid}>

@@ -51,7 +51,8 @@
   font-family: var(--alt-font-display), serif;
   font-style: italic;
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 11px;
+  color: #333333;
   text-decoration: none;
 }
 
@@ -69,12 +70,6 @@
   color: var(--ink);
   text-decoration: none;
   position: relative;
-}
-
-.navLinks a::before {
-  content: "0" attr(data-i) " / ";
-  color: var(--blue);
-  margin-right: 2px;
 }
 
 .navLinks a:hover {
@@ -120,30 +115,6 @@
   grid-template-columns: auto 1fr;
   gap: clamp(24px, 5vw, 64px);
   align-items: start;
-}
-
-.heroTag {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  border: 2px solid var(--line);
-  padding: 8px 14px;
-  margin-bottom: 28px;
-  opacity: 0;
-  animation: rise 0.6s ease forwards;
-  animation-delay: 0.05s;
-}
-
-.dot {
-  width: 8px;
-  height: 8px;
-  background: var(--blue);
-  border-radius: 50%;
-  animation: pulse 1.8s ease-in-out infinite;
 }
 
 .heroName {
@@ -271,17 +242,6 @@
   }
 }
 
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.5);
-    opacity: 0.5;
-  }
-}
-
 /* ---------- meta strip ---------- */
 
 .meta {
@@ -345,14 +305,6 @@
   align-items: flex-end;
   justify-content: space-between;
   margin-bottom: clamp(32px, 5vw, 56px);
-}
-
-.sectionNum {
-  font-family: var(--alt-font-display), serif;
-  font-style: italic;
-  color: var(--blue);
-  font-size: clamp(2.2rem, 5vw, 3.4rem);
-  line-height: 1;
 }
 
 .sectionTitle {
@@ -560,6 +512,11 @@
   font-family: var(--alt-font-display), serif;
   font-weight: 600;
   font-size: clamp(1.1rem, 2vw, 1.5rem);
+  color: #333333;
+}
+
+.contactBlock:hover .contactValue {
+  color: var(--white);
 }
 
 @media (max-width: 640px) {
@@ -589,9 +546,6 @@
 @media (max-width: 700px) {
   .heroGrid {
     grid-template-columns: 1fr;
-  }
-  .navLinks a::before {
-    display: none;
   }
 }
 
