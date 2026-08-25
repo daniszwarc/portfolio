@@ -60,7 +60,7 @@ const projects: Row[] = [
     title: "AlterEco Publishing Pipeline",
     description:
       "AI pipeline automating 40+ articles per issue from PDF to Drupal CMS for an economics cooperative. Claude Vision API + n8n orchestration; taxonomy matching with accent normalization. Delivered iteratively with the client.",
-    tags: ["n8n", "Claude Vision", "Drupal", "Python"],
+    tags: ["n8n", "Claude Vision", "Drupal", "JavaScript"],
     outcome: "30 min → under 3 min per article · 10x+ efficiency gain",
   },
 ];
