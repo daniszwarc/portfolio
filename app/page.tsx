@@ -33,16 +33,16 @@ const projects: Row[] = [
     title: "APiWiki",
     description:
       "SOX-compliant internal knowledge platform for a Fortune 500 client. RAG-powered chat interface with on-premises LLM inference, Markdown-to-HTML pipeline, full audit log UI, and RBAC. Worked directly with internal stakeholders through iterative delivery cycles.",
-    tags: ["Next.js", "FastAPI", "pgvector", "Docker", "On-prem LLM"],
+    tags: ["Next.js", "FastAPI", "pgvector", "Docker/Traefik", "On-prem LLM"],
     outcome: "SOX-compliant · Fortune 500 · on-premises inference",
   },
   {
     label: "MSc Research",
-    year: "2024–2026",
+    year: "2024–present",
     title: "WorkflowSynth",
     description:
       "Dissertation project converting natural language descriptions into formally verified executable workflows using a two-layer DSL and LLM-guided iterative refinement. LangGraph state machine with Lark-based grammar, 25 constrained primitives, and a verify-then-repair loop targeting n8n and LangChain output.",
-    tags: ["Python", "LangChain", "LangGraph", "Lark", "n8n"],
+    tags: ["Python", "LangChain", "LangGraph", "PyYAML", "n8n"],
     outcome: "82/82 unit tests · formal verification · University of Liverpool",
   },
   {
@@ -95,7 +95,7 @@ const experience: Row[] = [
 const stackGroups = [
   { title: "AI/LLM", items: "LangChain · LangGraph · RAG · pgvector · Agentic workflows · OpenAI · Anthropic" },
   { title: "Backend", items: "Python · FastAPI · Node.js · PHP · ColdFusion · SQL · PostgreSQL · MSSQL" },
-  { title: "Frontend", items: "React · Next.js · TypeScript · JavaScript · React Native · Expo" },
+  { title: "Frontend", items: "Next.js · TypeScript · JavaScript · React Native · Expo" },
   { title: "Infra", items: "Docker · Traefik · GitHub Actions · VPS · CI/CD · n8n" },
   { title: "Deep Learning", items: "PyTorch · fast.ai · ResNet · ViT · MIL · WSI analysis" },
   { title: "Languages", items: "English (fluent) · Spanish (fluent) · French (basic)" },
@@ -285,7 +285,7 @@ export default function AltHome() {
 
       <footer className={styles.footer}>
         <div className={`${styles.wrap} ${styles.footerInner}`}>
-          <span>Daniel Szwarc · Montreal, QC · 2026</span>
+          <span>Daniel Szwarc · 2026</span>
           <span>daniszwarc.com</span>
         </div>
       </footer>
