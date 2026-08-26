@@ -103,14 +103,6 @@ const experience: Row[] = [
     description:
       "Lead modernization of legacy systems for enterprise clients. Technical bridge between legacy business logic and modern stack — translating complex 4GL/COBOL workflows into PHP/JavaScript/SQL architectures.",
   },
-  {
-    label: "Expected 2026",
-    year: "",
-    title: "MSc in Artificial Intelligence (Expected 2026)",
-    company: "University of Liverpool",
-    description:
-      "Dissertation: WorkflowSynth — LLM-guided programme synthesis with formal verification for enterprise workflows. Advisor: Kathleen Kelm.",
-  },
 ];
 
 const education: Row[] = [
@@ -291,7 +283,7 @@ export default function AltHome() {
       </div>
 
       <Section id="projects" title="Projects" count="07 entries" rows={projects} />
-      <Section id="experience" title="Experience" count="03 entries" rows={experience} />
+      <Section id="experience" title="Experience" count="02 entries" rows={experience} />
 
       <section id="education" className={styles.section}>
         <div className={styles.wrap}>
