@@ -89,19 +89,19 @@ const projects: Row[] = [
 const principles = [
   {
     label: "Close to the problem.",
-    text: "I don't hand off specs and disappear. I stay close to the user through delivery — iterating until the system actually fits how people work, not how we imagined they would.",
+    text: "I stay close to the user through the entire delivery. The system has to fit how people actually work, and that only happens through iteration.",
   },
   {
     label: "Reliability over features.",
-    text: "Audit logs, RBAC, prompt injection defense, anonymization pipelines. Not because someone asked for them — because in the environments I work in, they're not optional.",
+    text: "Audit logs, RBAC, prompt injection defense, anonymization pipelines. In the environments I work in, these are part of the architecture from day one.",
   },
   {
     label: "Production first.",
-    text: "Every project I build runs on real infrastructure. Not a demo, not a Colab notebook. Docker, Traefik, CI/CD, self-managed VPS. If it's not deployed, it's not done.",
+    text: "Every project I build runs on real infrastructure. Docker, Traefik, CI/CD, self-managed VPS. Deployed and maintained.",
   },
   {
     label: "Iterative with real users.",
-    text: "Every project in this portfolio evolved through direct feedback cycles with the people who actually use it. That's not a methodology — it's just how good software gets built.",
+    text: "Every project in this portfolio evolved through direct feedback cycles with the people who use it. That is just how good software gets built.",
   },
 ];
 
