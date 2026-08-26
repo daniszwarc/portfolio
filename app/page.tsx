@@ -21,13 +21,14 @@ type Row = {
 
 const projects: Row[] = [
   {
-    label: "Clinical AI",
+    label: "MSc Research",
     year: "2024–present",
-    title: "BeyondTheProtocol",
+    title: "WorkflowSynth",
     description:
-      "Private medical intelligence platform for a patient with ultra-rare metastatic cancer. 289+ anonymized clinical documents processed into a unified bilingual dashboard — lab trends, PET-SUV tracking, liquid biopsy panels, and a RAG-powered AI assistant with mandatory source citations and 4-layer prompt injection defense.",
-    tags: ["Next.js 15", "FastAPI", "PostgreSQL/pgvector", "Anthropic API", "Docker/Traefik"],
-    outcome: "RBAC · audit log · on-prem VPS · bilingual EN/ES",
+      "Dissertation project converting natural language descriptions into formally verified executable workflows using a two-layer DSL and LLM-guided iterative refinement. LangGraph state machine with Lark-based grammar, 25 constrained primitives, and a verify-then-repair loop targeting n8n and LangChain output.",
+    tags: ["Python", "LangChain", "LangGraph", "PyYAML", "n8n"],
+    outcome: "82/82 unit tests · formal verification · University of Liverpool",
+    link: { href: "https://github.com/daniszwarc/workflowsynth", label: "View on GitHub →" },
   },
   {
     label: "Enterprise RAG",
@@ -39,14 +40,13 @@ const projects: Row[] = [
     outcome: "SOX-compliant · Fortune 500 · on-premises inference",
   },
   {
-    label: "MSc Research",
+    label: "Clinical AI",
     year: "2024–present",
-    title: "WorkflowSynth",
+    title: "BeyondTheProtocol",
     description:
-      "Dissertation project converting natural language descriptions into formally verified executable workflows using a two-layer DSL and LLM-guided iterative refinement. LangGraph state machine with Lark-based grammar, 25 constrained primitives, and a verify-then-repair loop targeting n8n and LangChain output.",
-    tags: ["Python", "LangChain", "LangGraph", "PyYAML", "n8n"],
-    outcome: "82/82 unit tests · formal verification · University of Liverpool",
-    link: { href: "https://github.com/daniszwarc/workflowsynth", label: "View on GitHub →" },
+      "Production clinical AI platform processing 289+ anonymized medical documents into a unified intelligence dashboard with RAG-powered assistant, mandatory source citations, and 4-layer prompt injection defense.",
+    tags: ["Next.js 15", "FastAPI", "PostgreSQL/pgvector", "Anthropic API", "Docker/Traefik"],
+    outcome: "RBAC · audit log · on-prem VPS · bilingual EN/ES",
   },
   {
     label: "AI Agent",
@@ -104,10 +104,10 @@ const experience: Row[] = [
       "Lead modernization of legacy systems for enterprise clients. Technical bridge between legacy business logic and modern stack — translating complex 4GL/COBOL workflows into PHP/JavaScript/SQL architectures.",
   },
   {
-    label: "2024–2026",
+    label: "Expected 2026",
     year: "",
-    title: "MSc in Artificial Intelligence",
-    company: "University of Liverpool · England",
+    title: "MSc in Artificial Intelligence (Expected 2026)",
+    company: "University of Liverpool",
     description:
       "Dissertation: WorkflowSynth — LLM-guided programme synthesis with formal verification for enterprise workflows. Advisor: Kathleen Kelm.",
   },
@@ -117,8 +117,8 @@ const education: Row[] = [
   {
     label: "Expected 2026",
     year: "",
-    title: "MSc in Artificial Intelligence",
-    company: "University of Liverpool, England",
+    title: "MSc in Artificial Intelligence (Expected 2026)",
+    company: "University of Liverpool",
     description:
       "Dissertation: WorkflowSynth — LLM-guided programme synthesis with formal verification for enterprise workflows",
   },
@@ -134,11 +134,9 @@ const education: Row[] = [
 const certifications = ["Agentic RAG Specialization · Coursera", "AI & Automation Specializations · Coursera / Udemy"];
 
 const stackGroups = [
-  { title: "AI/LLM", items: "LangChain · LangGraph · RAG · pgvector · Agentic workflows · OpenAI · Anthropic" },
-  { title: "Backend", items: "Python · FastAPI · Node.js · PHP · ColdFusion · SQL · PostgreSQL · MSSQL" },
-  { title: "Frontend", items: "Next.js · TypeScript · JavaScript · React Native · Expo" },
-  { title: "Infra", items: "Docker · Traefik · GitHub Actions · VPS · CI/CD · n8n" },
-  { title: "Deep Learning", items: "PyTorch · fast.ai · ResNet · ViT · MIL · WSI analysis" },
+  { title: "AI / LLM", items: "LangChain · LangGraph · RAG · pgvector · Agentic workflows · OpenAI · Anthropic · n8n" },
+  { title: "Production", items: "FastAPI · PostgreSQL · Docker · Traefik · CI/CD · GitHub Actions" },
+  { title: "Frontend", items: "React · Next.js · TypeScript · JavaScript · React Native · Expo" },
   { title: "Languages", items: "English (fluent) · Spanish (fluent) · French (basic)" },
 ];
 
@@ -235,7 +233,7 @@ export default function AltHome() {
             <div />
             <div>
               <p className={styles.heroName}>Dani Szwarc</p>
-              <p className={styles.heroRole}>Montreal · AI Engineer · Full-Stack Developer</p>
+              <p className={styles.heroRole}>Montreal · AI Systems Engineer</p>
               <h1 className={styles.headline}>
                 I build AI systems, from idea to final product. I work best when
                 I&apos;m close to the problem. Architecture, implementation, deploy,
@@ -284,7 +282,7 @@ export default function AltHome() {
         </div>
         <div className={styles.metaItem}>
           <span className={styles.metaLabel}>MSc AI</span>
-          <span className={styles.metaValue}>University of Liverpool, 2026</span>
+          <span className={styles.metaValue}>University of Liverpool (Expected 2026)</span>
         </div>
         <div className={styles.metaItem}>
           <span className={styles.metaLabel}>Open to</span>
@@ -331,7 +329,7 @@ export default function AltHome() {
         <div className={styles.wrap}>
           <div className={styles.sectionHead}>
             <h2 className={styles.sectionTitle}>Stack</h2>
-            <span className={styles.sectionCount}>06 groups</span>
+            <span className={styles.sectionCount}>04 groups</span>
           </div>
           <div className={styles.stackGrid}>
             {stackGroups.map((group) => (

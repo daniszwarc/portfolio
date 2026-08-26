@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { fraunces, jetbrains } from "./fonts";
 
 const siteUrl = "https://daniszwarc.com";
-const title = "Dani Szwarc — AI Engineer & Full-Stack Developer";
+const title = "Dani Szwarc — AI Systems Engineer";
 const description =
-  "Montreal-based AI engineer and full-stack developer. I build AI systems from idea to production.";
+  "Montreal-based AI systems engineer. I build production AI systems from idea to deployment.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -37,7 +37,7 @@ const personJsonLd = {
   "@type": "Person",
   name: "Dani Szwarc",
   url: siteUrl,
-  jobTitle: "AI Engineer & Full-Stack Developer",
+  jobTitle: "AI Systems Engineer",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Montreal",
