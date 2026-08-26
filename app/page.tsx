@@ -86,6 +86,25 @@ const projects: Row[] = [
   },
 ];
 
+const principles = [
+  {
+    label: "Close to the problem.",
+    text: "I don't hand off specs and disappear. I stay close to the user through delivery — iterating until the system actually fits how people work, not how we imagined they would.",
+  },
+  {
+    label: "Reliability over features.",
+    text: "Audit logs, RBAC, prompt injection defense, anonymization pipelines. Not because someone asked for them — because in the environments I work in, they're not optional.",
+  },
+  {
+    label: "Production first.",
+    text: "Every project I build runs on real infrastructure. Not a demo, not a Colab notebook. Docker, Traefik, CI/CD, self-managed VPS. If it's not deployed, it's not done.",
+  },
+  {
+    label: "Iterative with real users.",
+    text: "Every project in this portfolio evolved through direct feedback cycles with the people who actually use it. That's not a methodology — it's just how good software gets built.",
+  },
+];
+
 const experience: Row[] = [
   {
     label: "2006–present",
@@ -281,6 +300,21 @@ export default function AltHome() {
           <span className={styles.metaValue}>Full-time · Contract</span>
         </div>
       </div>
+
+      <section id="how-i-work" className={styles.section}>
+        <div className={styles.wrap}>
+          <div className={styles.sectionHead}>
+            <h2 className={styles.sectionTitle}>How I work</h2>
+          </div>
+          <div className={styles.principles}>
+            {principles.map((p) => (
+              <p className={styles.principle} key={p.label}>
+                <strong className={styles.principleLabel}>{p.label}</strong> {p.text}
+              </p>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <Section id="projects" title="Projects" count="07 entries" rows={projects} />
       <Section id="experience" title="Experience" count="02 entries" rows={experience} />
