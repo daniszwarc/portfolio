@@ -393,6 +393,7 @@ export default function AltHome() {
       <footer className={styles.footer}>
         <div className={`${styles.wrap} ${styles.footerInner}`}>
           <span>Daniel Szwarc · 2026</span>
+          <a href="/privacy">Privacy Policy</a>
           <span>daniszwarc.com</span>
         </div>
       </footer>
