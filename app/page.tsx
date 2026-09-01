@@ -32,7 +32,7 @@ const projects: Row[] = [
   },
   {
     label: "Enterprise RAG",
-    year: "2024–present",
+    year: "2025–present",
     title: "APiWiki",
     description:
       "SOX-compliant internal knowledge platform for a Fortune 500 client. RAG-powered chat interface with on-premises LLM inference, Markdown-to-HTML pipeline, full audit log UI, and RBAC. Worked directly with internal stakeholders through iterative delivery cycles.",
@@ -41,7 +41,7 @@ const projects: Row[] = [
   },
   {
     label: "Clinical AI",
-    year: "2024–present",
+    year: "2026–present",
     title: "BeyondTheProtocol",
     description:
       "Production clinical AI platform processing 289+ anonymized medical documents into a unified intelligence dashboard with RAG-powered assistant, mandatory source citations, and 4-layer prompt injection defense.",
@@ -59,7 +59,7 @@ const projects: Row[] = [
   },
   {
     label: "Automation",
-    year: "2023–present",
+    year: "2026–present",
     title: "AlterEco Publishing Pipeline",
     description:
       "AI pipeline automating 40+ articles per issue from PDF to Drupal CMS for an economics cooperative. Claude Vision API + n8n orchestration; taxonomy matching with accent normalization. Delivered iteratively with the client.",
@@ -77,7 +77,7 @@ const projects: Row[] = [
   },
   {
     label: "Healthcare AI",
-    year: "2023–2024",
+    year: "2025–present",
     title: "MedSynth",
     description:
       "Platform ingesting patient medical histories (PDFs) into structured clinical knowledge wikis using adversarial dual-model iteration (Claude Opus + GPT-4o) until clinical findings converge. Taken private; shared as architectural case study.",
@@ -86,7 +86,7 @@ const projects: Row[] = [
   },
   {
     label: "Personal Project",
-    year: "2024–present",
+    year: "2025–present",
     title: "Lecteur FR",
     description:
       "Installable offline-capable PWA that extracts and reads French academic PDFs aloud. pdf.js handles client-side text extraction with heading detection based on font-size ratios. A FastAPI microservice on a self-managed VPS proxies extracted text to an LLM for semantic cleanup before playback via the browser's native Web Speech API, with real-time sentence-by-sentence highlighting.",
