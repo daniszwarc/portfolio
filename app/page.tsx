@@ -84,6 +84,16 @@ const projects: Row[] = [
     tags: ["Python", "FastAPI", "PostgreSQL", "Next.js", "Docker"],
     outcome: "80% LLM cost reduction · adversarial dual-model · compliance-by-design",
   },
+  {
+    label: "Personal Project",
+    year: "2024–present",
+    title: "Lecteur FR",
+    description:
+      "Installable offline-capable PWA that extracts and reads French academic PDFs aloud. pdf.js handles client-side text extraction with heading detection based on font-size ratios. A FastAPI microservice on a self-managed VPS proxies extracted text to an LLM for semantic cleanup before playback via the browser's native Web Speech API, with real-time sentence-by-sentence highlighting.",
+    tags: ["Vanilla JS", "pdf.js", "Web Speech API", "FastAPI", "Docker/Traefik", "NaN API"],
+    outcome: "PWA installable · offline-capable · GitHub Pages + self-managed VPS",
+    link: { href: "https://daniszwarc.github.io/lecteur-fr/", label: "View project →" },
+  },
 ];
 
 const principles = [
@@ -316,7 +326,7 @@ export default function AltHome() {
         </div>
       </section>
 
-      <Section id="projects" title="Projects" count="07 entries" rows={projects} />
+      <Section id="projects" title="Projects" count="08 entries" rows={projects} />
       <Section id="experience" title="Experience" count="02 entries" rows={experience} />
 
       <section id="education" className={styles.section}>
