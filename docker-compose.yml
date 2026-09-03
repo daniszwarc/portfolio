@@ -7,7 +7,7 @@ services:
       - n8n_default
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.daniszwarc.rule=Host(`daniszwarc.com`)"
+      - "traefik.http.routers.daniszwarc.rule=Host(`daniszwarc.com`) || Host(`www.daniszwarc.com`)"
       - "traefik.http.routers.daniszwarc.entrypoints=websecure"
       - "traefik.http.routers.daniszwarc.tls=true"
       - "traefik.http.routers.daniszwarc.tls.certresolver=letsencrypt"
