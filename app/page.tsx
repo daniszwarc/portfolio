@@ -31,6 +31,15 @@ const projects: Row[] = [
     link: { href: "https://github.com/daniszwarc/workflowsynth", label: "View on GitHub →" },
   },
   {
+    label: "Client Project",
+    year: "2026–present",
+    title: "Personal Brokers",
+    description:
+      "End-to-end automation system for an Argentine insurance brokerage with 5 producers. WhatsApp messages (text and audio) and emails are automatically ingested, transcribed (Whisper), classified by AI, and surfaced as tasks on a shared Kanban dashboard. Producers manage policy activations and cancellations without manual triage.",
+    tags: ["Next.js 15", "PostgreSQL", "n8n", "NaN.builders/qwen3.6", "Whisper", "Meta WhatsApp API", "Docker/Traefik"],
+    outcome: "WhatsApp + email intake · AI classification · Kanban dashboard · TOTP 2FA",
+  },
+  {
     label: "Enterprise RAG",
     year: "2025–present",
     title: "APiWiki",
@@ -326,7 +335,7 @@ export default function AltHome() {
         </div>
       </section>
 
-      <Section id="projects" title="Projects" count="08 entries" rows={projects} />
+      <Section id="projects" title="Projects" count="09 entries" rows={projects} />
       <Section id="experience" title="Experience" count="02 entries" rows={experience} />
 
       <section id="education" className={styles.section}>
